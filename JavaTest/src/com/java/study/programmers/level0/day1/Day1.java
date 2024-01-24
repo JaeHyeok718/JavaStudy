@@ -1,4 +1,4 @@
-package com.java.study.programmers.day1;
+package com.java.study.programmers.level0.day1;
 
 import java.util.Scanner;
 
@@ -207,4 +207,20 @@ public class Day1 {
 	        return answer;
 	  }
 	
+	    public String solution(String str1, String str2) {
+	        String answer = "";
+	        int resultLength =str1.length()+str2.length(); 
+	        for(int i = 0; i<resultLength; i++){
+	            if(i%2==0){
+	                answer += str1.charAt(i);
+	            }else{
+	                answer += str2.charAt(i);
+	            }
+	        }
+	        System.out.println(answer);
+	        
+	     return answer;
+	    }
+	  
+	  
 }
