@@ -477,7 +477,6 @@ public class PCCE_Exam {
 		            }
 		        }
 		        
-		        // 아래 코드에는 틀린 부분이 없습니다.
 		        
 		        int num_max = -1;
 		        String answer = "";
