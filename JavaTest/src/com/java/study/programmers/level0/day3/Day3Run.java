@@ -7,9 +7,9 @@ public class Day3Run {
 
 		Day3 d3= new Day3();
 		
-		d3.method02();
-		d3.method03();
-		
+		//d3.method02();
+		//d3.method03();
+		d3.method04();
 	}
 
 }

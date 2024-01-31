@@ -194,9 +194,9 @@ public class Day3 {
 		int[] num_list= {3,4,2,5,1};
 		
         int answer = 0;
-        int result1= 1;
-        int result2 =0;
-        int result3=0;
+        int result1 = 1;
+        int result2 = 0;
+        int result3 = 0;
         for(int i =0; i<num_list.length; i++){
             result1 *= num_list[i];
         }
@@ -207,9 +207,29 @@ public class Day3 {
         result3 = result2*result2;
 		
         answer = result1>result3?0:1;
+        
 		System.out.println(answer);
 	}
-	
+	public void method05() {
+		int[] num_list = {1,2,3,4,5};
+		 
+		  String even ="";
+		  String odd="";
+		        
+		        for(int i = 0 ; i<num_list.length; i++){
+		            if(num_list[i]%2==0){//짝수
+		                even+= String.valueOf(num_list[i]);             
+		            }else{//홀수
+		                odd+= String.valueOf(num_list[i]);
+		            }
+		  
+		        int answer = Integer.parseInt(even)+Integer.parseInt(odd);
+		        
+		        System.out.println(answer);
+		        }
+			        
+		
+	}
 	
 	
 	
