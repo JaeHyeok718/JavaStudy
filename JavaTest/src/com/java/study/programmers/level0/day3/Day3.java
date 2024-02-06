@@ -357,12 +357,12 @@ public class Day3 {
     	int[][] queries= {{0,3},{1,2},{1,4}};
 
     	for(int i=0;i<queries.length;i++) {
-    		for(int j=0; j<queries[i].length;j++) {
-    			int[] query = new int[2];
-    			query[j]=queries[i][j];// query[0]=0; query[1]=3;
-    			
-    		}
-    		
+	    	int index1 = queries[i][0];
+	    	int index2 = queries[i][1];
+	    	int temp = arr[index1];	// 이미 arr[index1]의 값이 바뀌기 때문에 미리 저장 
+	    	
+	    	arr[index1]=arr[index2];
+    		arr[index2]=temp;
     		
     		
     		
