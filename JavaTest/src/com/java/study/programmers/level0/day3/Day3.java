@@ -1,5 +1,8 @@
 package com.java.study.programmers.level0.day3;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Day3 {
 	
 	 public String solution(String code) {
@@ -227,10 +230,40 @@ public class Day3 {
 		        
 		        System.out.println(answer);
 		        }
-			        
 		
 	}
-	
+    public void method06() {
+    	
+    	int[] num_list = {5,2,1,7,5};
+    	
+        int nLength = num_list.length;
+        int lastM = num_list[nLength-2];
+        int last = num_list[nLength-1];
+        int lastNum = 0;
+        if(last > lastM){
+            lastNum = last - lastM;
+        }else{
+            lastNum = last * 2;
+        }
+
+        int[] answer = new int[nLength + 1]; 
+        for(int i=0; i<nLength; i++){
+            answer[i] = num_list[i];
+        }
+    
+        answer[nLength] = lastNum; 
+         
+        System.out.println(Arrays.toString(answer));
+        
+    }
+   
+    
+    public void method07() {
+    	
+    	
+    	
+    	
+    }
 	
 	
 }
