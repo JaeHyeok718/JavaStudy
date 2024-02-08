@@ -6,8 +6,8 @@ public class Run {
 		// TODO Auto-generated method stub
    Day4 d4= new Day4();
 		
-		d4.method01();
-		
+		//d4.method01();
+		d4.method02();
 	}
 
 }
