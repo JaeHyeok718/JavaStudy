@@ -7,7 +7,9 @@ public class Run {
    Day4 d4= new Day4();
 		
 		//d4.method01();
-		d4.method02();
+		//d4.method02();
+   		//d4.method03();
+   		d4.method04();
 	}
 
 }
