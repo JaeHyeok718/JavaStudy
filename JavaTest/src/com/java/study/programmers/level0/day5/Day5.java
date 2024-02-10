@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class Day5 {
 
 	public void method01() {
-		
 //		콜라츠 수열 만들기
 //		제출 내역
 //		문제 설명
@@ -59,12 +58,37 @@ public class Day5 {
 	        int[] answer = new int[result.size()];
 	        for(int i=0;i<answer.length;i++){
 	            answer[i]=result.get(i);
-	            
 	        }
-		
 		System.out.println(Arrays.toString(answer));
 		
 	}
+	public void method02() {
+		int[] arr = {1,4,2,5,3};
+		
+	     ArrayList<Integer> stkList = new ArrayList<>();
+	     for (int i = 0; i < arr.length;) {
+	         if (stkList.isEmpty()) {
+	             stkList.add(arr[i]);
+	             i++;
+	         } else if (arr[i] > stkList.get(stkList.size() - 1)) {
+	             stkList.add(arr[i]);
+	             i++;
+	         } else if (arr[i] <= stkList.get(stkList.size() - 1)) {
+	             stkList.remove(stkList.size() - 1);
+	         }
+	     }
+	     int[] stk = new int[stkList.size()];
+	     for (int j = 0; j < stk.length; j++) {
+	         stk[j] = stkList.get(j);
+	     }
+
+			
+			System.out.println(Arrays.toString(stk));
+			
+		
+	}
+	
+	
 	
 	
 	
