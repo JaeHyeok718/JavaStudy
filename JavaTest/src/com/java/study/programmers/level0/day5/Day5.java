@@ -65,7 +65,7 @@ public class Day5 {
 	public void method02() {
 		int[] arr = {1,4,2,5,3};
 		
-	     ArrayList<Integer> stkList = new ArrayList<>();
+		ArrayList<Integer> stkList = new ArrayList<>();
 	     for (int i = 0; i < arr.length;) {
 	         if (stkList.isEmpty()) {
 	             stkList.add(arr[i]);
@@ -80,14 +80,61 @@ public class Day5 {
 	     int[] stk = new int[stkList.size()];
 	     for (int j = 0; j < stk.length; j++) {
 	         stk[j] = stkList.get(j);
-	     }
-
+	     
+        }
 			
 			System.out.println(Arrays.toString(stk));
 			
 		
 	}
 	
+	public void method03() {
+		
+//		간단한 논리 연산
+//		제출 내역
+//		문제 설명
+//		boolean 변수 x1, x2, x3, x4가 매개변수로 주어질 때, 다음의 식의 true/false를 return 하는 solution 함수를 작성해 주세요.
+//
+//		(x1 ∨ x2) ∧ (x3 ∨ x4)
+//		입출력 예
+//		x1	x2	x3	x4	result
+//		false	true	true	true	true
+//		true	false	false	false	false
+//		입출력 예 설명
+//		입출력 예 #1
+//
+//		예제 1번의 x1, x2, x3, x4로 식을 계산하면 다음과 같습니다.
+//
+//		(x1 ∨ x2) ∧ (x3 ∨ x4) ≡ (F ∨ T) ∧ (T ∨ T) ≡ T ∧ T ≡ T
+//
+//		따라서 true를 return 합니다.
+//
+//		입출력 예 #2
+//
+//		예제 2번의 x1, x2, x3, x4로 식을 계산하면 다음과 같습니다.
+//
+//		(x1 ∨ x2) ∧ (x3 ∨ x4) ≡ (T ∨ F) ∧ (F ∨ F) ≡ T ∧ F ≡ F
+//
+//		따라서 false를 return 합니다.
+//
+//		∨과 ∧의 진리표는 다음과 같습니다.
+//
+//		x	y	x ∨ y	x ∧ y
+//		T	T	T	T
+//		T	F	T	F
+//		F	T	T	F
+//		F	F	F	F
+		boolean x1 = true;
+		boolean x2= false;
+		boolean x3=false;
+		boolean x4=false;
+		
+	        boolean answer = (x1||x2)&&(x3||x4);
+	  
+		
+	        System.out.println(answer);
+	        
+	}
 	
 	
 	

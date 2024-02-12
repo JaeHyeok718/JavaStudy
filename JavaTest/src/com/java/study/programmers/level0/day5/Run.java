@@ -8,7 +8,9 @@ public class Run {
 		Day5 d5 = new Day5();
 		
 		//d5.method01();
-		d5.method02();
+		//d5.method02();
+		//d5.method03();
+		
 	}
 
 }
