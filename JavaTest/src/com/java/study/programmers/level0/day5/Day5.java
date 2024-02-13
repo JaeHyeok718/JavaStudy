@@ -297,7 +297,24 @@ public class Day5 {
 		System.out.println(sum % 9);
 	}
 	
+	public void method07() {
+	String my_string="rermgorpsam";
+	int[][] queries = {{2,3},{0,7},{5,9},{6,10}};
 	
+	 for(int i=0;i<queries.length;i++){//23
+         int first=queries[i][0];
+         int last=queries[i][1];
+          String pre=my_string.substring(0,first);
+          
+          String change=my_string.substring(first,last+1); 
+          String reversed = new StringBuilder(change).reverse().toString();
+         
+          String lastS=my_string.substring(last+1);
+          
+          my_string= pre+reversed+lastS;
+	 }
+	 System.out.println(my_string);
+	}
 	
 	
 }

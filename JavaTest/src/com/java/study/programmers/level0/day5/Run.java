@@ -12,8 +12,8 @@ public class Run {
 		//d5.method03();
 		//d5.method04();
 		//d5.method05();
-		d5.method06();
-		
+		//d5.method06();
+		d5.method07();
 	}
 
 }
