@@ -10,6 +10,9 @@ public class Run {
 		//d5.method01();
 		//d5.method02();
 		//d5.method03();
+		//d5.method04();
+		//d5.method05();
+		d5.method06();
 		
 	}
 
