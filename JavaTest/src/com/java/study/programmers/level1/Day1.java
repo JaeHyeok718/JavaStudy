@@ -32,7 +32,7 @@ public class Day1 {
 	 long[] arr = new long[(int) n];
 	 
 	 for(int i=1; i<arr.length;i++) {
-		 arr[i-1]=x*i;
+		 arr[i-1]=x*i;// i는 1부터 시작인데 arr은 0번인덱스부터 시작해야한다.
 	 }
 	 
 	 System.out.println(Arrays.toString(arr));
@@ -93,7 +93,7 @@ public class Day1 {
                list.add(x);
             }
         }
-        Collections.sort(list);
+        Collections.sort(list);//List를 오름차순으로 정렬해주는 메소드 즉, 0번인덱스에는 제일 작은 수가 있다. 
         
         int answer =list.get(0);
 		
@@ -195,7 +195,7 @@ public class Day1 {
 		
 	    String a = String.valueOf(n);
 
-        String reversed = new StringBuilder(a).reverse().toString();
+        String reversed = new StringBuilder(a).reverse().toString();//String은 불변 이기 때문에 가변으로 바꾸고 마지막에 다시 가변화 시키기
         
         int[] answer = new int[reversed.length()];
         
