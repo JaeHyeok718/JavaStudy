@@ -17,7 +17,7 @@ public class Run {
 		Day2 d2 = new Day2();
 		//d2.method01();
 		//d2.method02();
-		
+		d2.method04();
 		
 		
 	}
