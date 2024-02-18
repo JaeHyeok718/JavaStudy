@@ -12,10 +12,11 @@ public class Run {
 		//d1.method04();
 		//d1.method05();
 		//d1.method06();
-		d1.method07();
+		//d1.method07();
 		
 		Day2 d2 = new Day2();
-		
+		//d2.method01();
+		//d2.method02();
 		
 		
 		
