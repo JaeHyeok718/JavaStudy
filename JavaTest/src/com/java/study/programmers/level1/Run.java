@@ -19,8 +19,11 @@ public class Run {
 		//d2.method02();
 		//d2.method04();
 		//d2.method05();
-		d2.method06();
+		//d2.method06();
 		
+		
+		Day3 d3 = new Day3();
+		d3.method01();
 	}
 
 }
