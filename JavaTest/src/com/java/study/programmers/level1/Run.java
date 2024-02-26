@@ -28,6 +28,8 @@ public class Run {
 		//d3.method03();
 		//d3.method04();
 		//d3.method05();
+		//d3.method06();
+		d3.method07();
 	}
 
 }

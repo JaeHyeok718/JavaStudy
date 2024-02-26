@@ -207,4 +207,66 @@ public class Day3 {
 	        }
 	        System.out.println(Arrays.toString(answer));
 	}
+	public void method06() {
+		
+		/*
+		 * 핸드폰 번호 가리기 제출 내역 문제 설명 프로그래머스 모바일은 개인정보 보호를 위해 고지서를 보낼 때 고객들의 전화번호의 일부를 가립니다.
+		 * 전화번호가 문자열 phone_number로 주어졌을 때, 전화번호의 뒷 4자리를 제외한 나머지 숫자를 전부 *으로 가린 문자열을 리턴하는
+		 * 함수, solution을 완성해주세요.
+		 * 
+		 * 제한 조건 phone_number는 길이 4 이상, 20이하인 문자열입니다. 입출력 예 phone_number return
+		 * "01033334444" "*******4444" "027778888" "*****8888"
+		 */
+		System.out.println("핸드폰번호를 입력해주세요.");
+		String phone_number=sc.nextLine();
+		
+	    String answer = "";
+        String sub1= phone_number.substring(phone_number.length()-4);
+        String str1="*".repeat(phone_number.length()-4);
+        answer = str1+sub1;
+		
+        
+        System.out.println(answer);
+	}
+	
+	public void method07() {
+		
+//		제일 작은 수 제거하기
+//		제출 내역
+//		문제 설명
+//		정수를 저장한 배열, arr 에서 가장 작은 수를 제거한 배열을 리턴하는 함수, solution을 완성해주세요.
+//		단, 리턴하려는 배열이 빈 배열인 경우엔 배열에 -1을 채워 리턴하세요. 예를들어 arr이 [4,3,2,1]인 경우는 [4,3,2]를 리턴 하고, [10]면 [-1]을 리턴 합니다.
+//
+//		제한 조건
+//		arr은 길이 1 이상인 배열입니다.
+//		인덱스 i, j에 대해 i ≠ j이면 arr[i] ≠ arr[j] 입니다.
+//		입출력 예
+//		arr	return
+//		[4,3,2,1]	[4,3,2]
+//		[10]	[-1]
+//		
+	
+		int[] arr={4,3,2,1};
+		
+	     if (arr.length == 1) 
+	    	 System.out.println(Arrays.toString(new int[] {-1})); // 길이가 1일 때 처리
+
+	        int min = arr[0];
+	        for (int i = 1; i < arr.length; i++) {
+	            if (arr[i] < min) {
+	                min = arr[i]; // 최솟값 찾기
+	            }
+	        }
+
+	        int[] answer = new int[arr.length - 1]; // 최솟값을 제외한 배열의 길이
+	        int index = 0;
+	        for (int num : arr) {
+	            if (num != min) {
+	                answer[index++] = num; // 최솟값을 제외하고 배열 채우기
+	            }
+	        }
+	        System.out.println(Arrays.toString(answer));
+	}
+	
+	
 }
