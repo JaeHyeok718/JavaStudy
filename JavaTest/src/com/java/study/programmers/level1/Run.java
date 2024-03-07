@@ -39,7 +39,11 @@ public class Run {
 		//d4.method03();
 		//d4.method04();
 		//d4.method05();
-		d4.method06();
+		//d4.method06();
+		//d4.method07();
+		//d4.method08();
+		//d4.method09();
+		//d4.method010();
 	}
 
 }

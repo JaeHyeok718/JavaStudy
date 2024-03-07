@@ -1,7 +1,9 @@
 package com.java.study.programmers.level1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Day4 {
@@ -224,7 +226,7 @@ public class Day4 {
 		if (s.length() == 4 || s.length() == 6) {
 			// 문자열의 모든 문자가 숫자인지 확인
 			for (int i = 0; i < s.length(); i++) {
-				if (!Character.isDigit(s.charAt(i))) {//문자열확인 메소드이다.
+				if (!Character.isDigit(s.charAt(i))) {// 문자열확인 메소드이다.
 					result = false; // 숫자가 아닌 문자가 있으면 false 반환
 				}
 			}
@@ -232,8 +234,156 @@ public class Day4 {
 		} else {
 			result = false; // 길이 조건을 만족하지 않으면 false 반환
 		}
-		
+
 		System.out.println(result);
 	}
 
+	public void method07() {
+
+//		행렬의 덧셈
+//		제출 내역
+//		문제 설명
+//		행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과가 됩니다. 2개의 행렬 arr1과 arr2를 입력받아,
+		// 행렬 덧셈의 결과를 반환하는 함수, solution을 완성해주세요.
+//
+//		제한 조건
+//		행렬 arr1, arr2의 행과 열의 길이는 500을 넘지 않습니다.
+//		입출력 예
+//		arr1	arr2	return
+//		[[1,2],[2,3]]	[[3,4],[5,6]]	[[4,6],[7,9]]
+//		[[1],[2]]	[[3],[4]]	[[4],[6]]
+
+		int[][] arr1 = { { 1, 2 }, { 2, 3 } };
+		int[][] arr2 = { { 3, 4 }, { 5, 6 } };
+
+		int rows = arr1.length;
+		int cols = arr1[0].length;
+
+		int[][] answer = new int[rows][cols];
+
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				answer[i][j] = arr1[i][j] + arr2[i][j];
+			}
+		}
+
+		System.out.println(Arrays.toString(answer));
+	}
+
+	public void method08() {
+
+//		직사각형 별찍기
+//		제출 내역
+//		문제 설명
+//		이 문제에는 표준 입력으로 두 개의 정수 n과 m이 주어집니다.
+//		별(*) 문자를 이용해 가로의 길이가 n, 세로의 길이가 m인 직사각형 형태를 출력해보세요.
+//
+//		제한 조건
+//		n과 m은 각각 1000 이하인 자연수입니다.
+//		예시
+//		입력
+//
+//		5 3
+//		출력
+//
+//		*****
+//		*****
+//		*****
+
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		for (int i = 0; i < m; i++) {
+
+			for (int j = 0; j < n; j++) {
+				System.out.print("*");
+			}
+			System.out.println();// 다음 줄로
+		}
+	}
+
+	public void method09() {
+//		최대공약수와 최소공배수
+//		제출 내역
+//		문제 설명
+//		두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환하는 함수, solution을 완성해 보세요. 
+//		배열의 맨 앞에 최대공약수, 그다음 최소공배수를 넣어 반환하면 됩니다. 예를 들어 두 수 3, 12의 최대공약수는 3, 최소공배수는 12이므로 solution(3, 12)는 [3, 12]를 반환해야 합니다.
+//
+//		제한 사항
+//		두 수는 1이상 1000000이하의 자연수입니다.
+//		입출력 예
+//		n	m	return
+//		3	12	[3, 12]
+//		2	5	[1, 10]
+//		입출력 예 설명
+//		입출력 예 #1
+//		위의 설명과 같습니다.
+//
+//		입출력 예 #2
+//		자연수 2와 5의 최대공약수는 1, 최소공배수는 10이므로 [1, 10]을 리턴해야 합니다.	
+		System.out.println("자연수 1을 입력해주세요 : ");
+		int n = sc.nextInt();
+
+		System.out.println("자연수 2를 입력해주세요 : ");
+		int m = sc.nextInt();
+
+		// 초기 최대공약수를 1로 설정
+		int gcd = 1;
+		// 더 작은 수를 찾아 최대공약수 계산을 위한 범위 설정
+		int smaller = Math.min(n, m);
+		for (int i = 1; i <= smaller; i++) {
+			// 두 수 모두를 나눌 수 있는 수를 찾으면 그 수가 최대공약수
+			if (n % i == 0 && m % i == 0) {
+				gcd = i;
+			}
+		}
+		// 최소공배수 계산: 두 수의 곱 / 최대공약수
+		int lcm = (n * m) / gcd;
+		// 결과 배열 생성 및 반환
+		int[] answer = { gcd, lcm };
+		System.out.println(Arrays.toString(answer));
+	}
+
+	public void method10() {
+
+//		같은 숫자는 싫어
+//		제출 내역
+//		문제 설명
+//		배열 arr가 주어집니다. 배열 arr의 각 원소는 숫자 0부터 9까지로 이루어져 있습니다.
+//		이때, 배열 arr에서 연속적으로 나타나는 숫자는 하나만 남기고 전부 제거하려고 합니다. 단, 제거된 후 남은 수들을 반환할 때는 배열 arr의 원소들의 순서를 유지해야 합니다. 예를 들면,
+//
+//		arr = [1, 1, 3, 3, 0, 1, 1] 이면 [1, 3, 0, 1] 을 return 합니다.
+//		arr = [4, 4, 4, 3, 3] 이면 [4, 3] 을 return 합니다.
+//		배열 arr에서 연속적으로 나타나는 숫자는 제거하고 남은 수들을 return 하는 solution 함수를 완성해 주세요.
+//
+//		제한사항
+//		배열 arr의 크기 : 1,000,000 이하의 자연수
+//		배열 arr의 원소의 크기 : 0보다 크거나 같고 9보다 작거나 같은 정수
+//		입출력 예
+//		arr	answer
+//		[1,1,3,3,0,1,1]	[1,3,0,1]
+//		[4,4,4,3,3]	[4,3]
+//		입출력 예 설명
+//		입출력 예 #1,2
+//		문제의 예시와 같습니다.
+		
+		int [] arr = {1,1,3,3,0,1,1};
+	      List<Integer> list = new ArrayList<>();
+	        // 비교할 이전 요소가 없기 때문에 첫 번째 요소를 리스트에 추가
+	        list.add(arr[0]);
+	        // 배열의 두 번째 요소부터 시작
+	        for (int i = 1; i < arr.length; i++) {
+	            // 현재 요소가 마지막으로 추가된 요소와 다른지 확인
+	            if (arr[i] != arr[i - 1]) {
+	                list.add(arr[i]);
+	            }
+	        }
+	        // 리스트를 배열로 변환
+	        int[] answer = new int[list.size()];
+	        for (int i = 0; i < list.size(); i++) {
+	            answer[i] = list.get(i);
+	        }
+	        
+		System.out.println(Arrays.toString(answer));
+		
+	}
 }
