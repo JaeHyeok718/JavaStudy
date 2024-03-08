@@ -46,8 +46,8 @@ public class Run {
 		//d4.method010();
 		
 		Day5 d5 = new Day5();
-		
-		
+		//d5.method01();
+		d5.method02();
 		
 	}
 
